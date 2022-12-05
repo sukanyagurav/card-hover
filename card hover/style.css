@@ -1,0 +1,146 @@
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.card{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #474747;
+    width: 300px;
+    box-shadow: 0px 2px 21px rgba(0,0,0,0.25);
+    border-radius: 26px;
+    overflow: hidden;
+}
+.description{
+    background: transparent;
+    box-shadow: 0px 2px 21px rgba(0,0,0,0.25);
+    border-radius: 26px;
+    padding: 40px;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+}
+.circle-top,
+.circle-bottom{
+    position: absolute;
+    width:50px;
+    height: 50px;
+    background: #f69660;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+.circle-top{
+    top:-10px;
+    left:-10px;
+}
+.circle-bottom{
+    bottom:-10px;
+    right: -10px;
+}
+.card:hover .circle-top,
+.card:hover .circle-bottom{
+    transform: scale(12);
+}
+.card:hover .description p,
+.card:hover .description h1{
+    color:#222;
+}
+/*****************card2*********/
+.card-2{
+    background-color: #efecea;
+    width:280px;
+    height:350px;
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.card-2 h1{
+    font-size: 24px;
+    font-weight: 500;
+    color:#101010;
+
+}
+.card-2 .clip{
+    position: absolute;
+    background-color: #ff0c9a;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    clip-path: circle(15% at 105% 47.5%);
+    transition: 0.5s all ease-in-out;
+
+}
+.card-2 .clip h2{
+    color:#fafafa;
+    font-size: 22px;
+    font-weight: 500;
+}
+.card-2 .clip .arrow{
+    position: absolute;
+    right:2px;
+    top:calc(50% - 20px);
+    visibility: visible;
+    opacity: 1;
+    transition: 0.2s all ease-in-out;
+}
+.card-2 .clip .arrow svg{
+    width: 20px;
+    height: 20px;
+}
+.card-2:hover .clip{
+    clip-path: circle(150% at 105% 47.5%);
+}
+.card-2:hover .clip .arrow{
+    visibility: hidden;
+    opacity: 0;
+}
+
+/***********CARD 3**********/
+.card-3{
+    background-color: #efecea;
+    border-radius: 6px;
+    color:#101010;
+    padding:16px;
+    width:220px;
+    transition: 0.6s;
+    transform: translate(0);
+    font-weight: 400;
+    overflow: hidden;
+}
+.card-3:hover{
+    color:#fff;
+}
+.card-3 p{
+    margin: 0;
+}
+.card-3::before{
+    content:'';
+    position: absolute;
+    top:-75px;
+    left:-45px;
+    background: linear-gradient(to right,
+    #3bd9d9,
+    #36a6bf);
+    border-radius: 50%;
+    width: 200px;
+    height:200px;
+    z-index: -1;
+    transition: 0.6s;
+}
+.card-3:hover::before{
+    transform: scale(5);
+}
